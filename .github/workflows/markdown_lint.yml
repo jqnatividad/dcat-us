@@ -19,7 +19,7 @@ jobs:
       - name: Run markdownlint
         uses: DavidAnson/markdownlint-cli2-action@v15
         with:
-            config: markdownlint.yaml
+            config: markdownlint.yml
             globs: |
               README.md
               docs/*.md
