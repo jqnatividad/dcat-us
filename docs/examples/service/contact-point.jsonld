@@ -1,29 +1,14 @@
 {
   "@context": "https://raw.githubusercontent.com/DOI-DO/dcat-us/main/context/dcat-us-3.0.jsonld",
-  "@graph": [
-    {
-      "@id": "https://uscensus.gov/123",
-      "@type": "dcat:DataService",
-      "contactPoint": [
-        "_:n89b85bc84afc4398ae0a32fa192effdab1",
-        "_:n89b85bc84afc4398ae0a32fa192effdab2"
-      ]
-    },
-    {
-      "@id": "_:n89b85bc84afc4398ae0a32fa192effdab1",
-      "@type": "vcard:Organization",
-      "vcard:fn": "Abteilung L\u00e4rm BAFU",
-      "vcard:hasEmail": {
-        "@id": "mailto:noise@bafu.admin.ch"
-      }
-    },
-    {
-      "@id": "_:n89b85bc84afc4398ae0a32fa192effdab2",
-      "@type": "vcard:Individual",
-      "vcard:fn": "Sekretariat BAFU",
-      "vcard:hasEmail": {
-        "@id": "mailto:sekretariat@bafu.admin.ch"
-      }
-    }
-  ]
+  "@id": "https://example.com/service1",
+  "@type": "dcat:DataService",
+  "title": "Data Service 1",
+  "description": "This is a service that provides data.",
+  "publisher": "https://example.com/publisher1",
+  "endpointURL": "https://example.com/service1/endpoint1",
+  "contactPoint": {
+    "@type": "vcard:Kind",
+    "fn": "US Census Info",
+    "hasEmail": "mailto:info@census.gov"
+  }
 }

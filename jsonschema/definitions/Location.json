@@ -11,18 +11,23 @@
             "type": "string",
             "default": "Location"
         },
-        "prefLabel": {
-            "$id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-            "title": "geographic name",
-            "description": "This property contains a preferred label of the Location.",
-            "type": "string"
-        },
-        "prefLabelMap": {
-            "$id": "http://www.w3.org/2004/02/skos/core#prefLabel_lang_map",
-            "description": "Language map for property title. E.g. {'es': 'spanish words', 'fr': 'french words'}",
-            "type": [
-                "null",
-                "object"
+        "bbox": {
+            "$id": "http://www.w3.org/ns/dcat#bbox",
+            "title": "bounding box",
+            "description": "bounding box associated location (in any coordinate system)",
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "oneOf": [
+                        {
+                            "type": "string",
+                            "format": "iri",
+                            "description": "This can be one of the following: "
+                        }
+                    ]
+                }
             ]
         },
         "centroid": {
@@ -102,27 +107,48 @@
                 }
             ]
         },
-        "bbox": {
-            "$id": "http://www.w3.org/ns/dcat#bbox",
-            "title": "bounding box",
-            "description": "bounding box associated location (in any coordinate system)",
+        "altLabel": {
+            "$id": "http://www.w3.org/2004/02/skos/core#altLabel",
+            "title": "alternative names",
+            "description": "This property provides alternative names for a location",
             "oneOf": [
                 {
                     "type": "null"
                 },
                 {
-                    "oneOf": [
-                        {
-                            "type": "string",
-                            "format": "iri",
-                            "description": "This can be one of the following: "
-                        }
-                    ]
+                    "type": "string"
                 }
+            ]
+        },
+        "altLabelMap": {
+            "$id": "http://www.w3.org/2004/02/skos/core#altLabel_lang_map",
+            "description": "Language map for property title. E.g. {'es': 'spanish words', 'fr': 'french words'}",
+            "type": [
+                "null",
+                "object"
+            ]
+        },
+        "prefLabel": {
+            "$id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+            "title": "geographic name",
+            "description": "This property contains a preferred label of the Location.",
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "prefLabelMap": {
+            "$id": "http://www.w3.org/2004/02/skos/core#prefLabel_lang_map",
+            "description": "Language map for property title. E.g. {'es': 'spanish words', 'fr': 'french words'}",
+            "type": [
+                "null",
+                "object"
             ]
         }
     },
-    "required": [
-        "prefLabel"
-    ]
+    "required": []
 }

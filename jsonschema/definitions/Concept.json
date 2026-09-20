@@ -11,36 +11,6 @@
             "type": "string",
             "default": "Concept"
         },
-        "inScheme": {
-            "$id": "http://www.w3.org/2004/02/skos/core#inScheme",
-            "title": "in scheme",
-            "description": "\nConcept scheme defining the concept.",
-            "oneOf": [
-                {
-                    "$ref": "#/definitions/ConceptScheme",
-                    "description": "inline description of ConceptScheme"
-                },
-                {
-                    "type": "string",
-                    "description": "reference iri of ConceptScheme",
-                    "format": "iri"
-                }
-            ]
-        },
-        "prefLabel": {
-            "$id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-            "title": "preferred label",
-            "description": "Preferred label for the controlled vocabulary term (one per language).",
-            "type": "string"
-        },
-        "prefLabelMap": {
-            "$id": "http://www.w3.org/2004/02/skos/core#prefLabel_lang_map",
-            "description": "Language map for property title. E.g. {'es': 'spanish words', 'fr': 'french words'}",
-            "type": [
-                "null",
-                "object"
-            ]
-        },
         "altLabel": {
             "$id": "http://www.w3.org/2004/02/skos/core#altLabel",
             "title": "alternate label",
@@ -62,6 +32,43 @@
                 "object"
             ]
         },
+        "definition": {
+            "$id": "http://www.w3.org/2004/02/skos/core#definition",
+            "title": "definition",
+            "description": "Definition of the controlled vocabulary term.",
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "definitionMap": {
+            "$id": "http://www.w3.org/2004/02/skos/core#definition_lang_map",
+            "description": "Language map for property title. E.g. {'es': 'spanish words', 'fr': 'french words'}",
+            "type": [
+                "null",
+                "object"
+            ]
+        },
+        "inScheme": {
+            "$id": "http://www.w3.org/2004/02/skos/core#inScheme",
+            "title": "in scheme",
+            "description": "\nConcept scheme defining the concept.",
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/ConceptScheme",
+                    "description": "inline description of ConceptScheme"
+                },
+                {
+                    "type": "string",
+                    "description": "reference iri of ConceptScheme",
+                    "format": "iri"
+                }
+            ]
+        },
         "notation": {
             "$id": "http://www.w3.org/2004/02/skos/core#notation",
             "title": "notation",
@@ -78,21 +85,14 @@
                 }
             ]
         },
-        "definition": {
-            "$id": "http://www.w3.org/2004/02/skos/core#definition",
-            "title": "definition",
-            "description": "Definition of the controlled vocabulary term.",
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "string"
-                }
-            ]
+        "prefLabel": {
+            "$id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+            "title": "preferred label",
+            "description": "Preferred label for the controlled vocabulary term (one per language).",
+            "type": "string"
         },
-        "definitionMap": {
-            "$id": "http://www.w3.org/2004/02/skos/core#definition_lang_map",
+        "prefLabelMap": {
+            "$id": "http://www.w3.org/2004/02/skos/core#prefLabel_lang_map",
             "description": "Language map for property title. E.g. {'es': 'spanish words', 'fr': 'french words'}",
             "type": [
                 "null",

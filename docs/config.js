@@ -1,8 +1,13 @@
 var respecConfig = {
   specStatus: "base",
+  group: "",
   latestVersion: "https://doi-do.github.io/dcat-us/",
   logos: [],
   maxTocLevel: 2,
+  overrideCopyright: true,
+  lint: {
+    "no-w3c-group": false, // Disable linting for W3C group association
+  },
   editors: [
     {
       name: "Thomas Dabolt",
@@ -45,8 +50,7 @@ var respecConfig = {
     repoURL: "https://github.com/DOI-DO/dcat-us/",
   },
   edDraftURI: "https://doi-do.github.io/dcat-us/",
-  subtitle:
-    "A DCAT Application Profile for the United States of America (Working Draft)",
+  
   localBiblio: {
     CC: {
       href: "http://creativecommons.org/licenses/",
@@ -165,6 +169,11 @@ var respecConfig = {
       title: "QUDT Units Vocabulary ",
       publisher: "http://www.qudt.org",
     },
+    "SDMX-ATTRIBUTE": {
+      href:"http://purl.org/linked-data/sdmx/2009/attribute",
+      title:"SDMX Attribute Concept Vocabulary",
+      publisher:"SDMX",
+    },
     SPDX: {
       href: "https://spdx.org/rdf/terms/",
       title: "SPDX 2.2.1",
@@ -185,7 +194,7 @@ var respecConfig = {
     "DATA-GOV-LICENSE": {
       href: "https://TBD/vocabulary/licenses",
       title:
-        "Data.Gov List of licenses for US opendata to enter in dct:license",
+        "Data.Gov List of licenses for US opendata to enter in dct:license " ,
       publisher: "United States Government",
     },
     "DATA-GOV": {
